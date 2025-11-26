@@ -1,73 +1,47 @@
-# React + TypeScript + Vite
+# 🎟️ Ticket Landing - Experiências ao vivo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é o repositório da *landing page* **Ticket Landing**, um projeto de e-commerce focado na venda de ingressos para eventos ao vivo.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 💡 Sobre o Projeto
 
-## React Compiler
+O projeto oferece uma interface moderna e intuitiva para a busca e compra de ingressos, destacando as principais categorias: shows, esportes e festivais. Foi desenvolvido com um foco em desempenho e tipagem segura utilizando o ecossistema React/Vite/TypeScript.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Funcionalidades em Destaque
 
-## Expanding the ESLint configuration
+* **Design Responsivo e Moderno:** Utiliza o Tailwind CSS e a fonte `Space Grotesk` para um visual atraente e funcional.
+* **Seção de Destaque (Hero):** Apresenta o evento principal (Ex: "Snoop Dogg") com informações detalhadas, opções de *passes* (VIP + Lounge) e *e-Ticket* imediato.
+* **Carrosséis de Eventos:** As seções de Shows, Esportes e Festivais utilizam lógica de carrossel para exibir diferentes eventos dinamicamente.
+    * **Autoplay e Pausa:** O carrossel avança automaticamente (com diferentes intervalos: 4.5s, 5.2s, 5.6s) e pausa a rotação quando o usuário passa o mouse sobre a seção (`onMouseEnter`/`onMouseLeave`).
+    * **Navegação Manual:** Controles visuais (`‹` e `›`) e indicadores na parte inferior permitem a navegação manual.
+* **Desenvolvimento com TypeScript:** O código é fortemente tipado, utilizando a interface `Card` para a estrutura dos dados dos eventos.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Tecnologias Utilizadas
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+O projeto é um template moderno de React com Vite e TypeScript.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+* **Frontend Framework:** `react` (v19.2.0)
+* **Build Tool:** `vite` (v7.2.4) com `@vitejs/plugin-react`
+* **Linguagem:** `typescript` (v~5.9.3)
+* **Estilização:** `tailwindcss` (v4.1.17) (via PostCSS)
+* **Linting:** `eslint` (v9.39.1) com suporte a TypeScript e React Hooks.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🚀 Primeiros Passos
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Siga as instruções abaixo para configurar e rodar o projeto localmente.
+
+### ⚙️ Instalação de Dependências
+
+```bash
+# Navegue até o diretório do projeto
+# cd nicolasffe/e-commerce/e-commerce-c3f13d84f8fd8db6b70d59bb615c2a9d9b2203bd
+
+# Instale as dependências usando npm
+npm install
+# ou yarn install
+# ou pnpm install
